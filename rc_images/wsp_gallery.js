@@ -204,6 +204,8 @@ wsp_gallery.prototype.openlayer = function(imgurl, width, height, usenavbuttons,
 						wsp_gallery.cancelPropagation(event);												
 						wsp_gallery.gotoNext(galleryid, false);  
 					};
+
+				navl.classList.add((i == 0) ? 'galleryprevbutton' : 'gallerynextbutton');
 			}
 		}
 		
@@ -230,6 +232,7 @@ wsp_gallery.prototype.openlayer = function(imgurl, width, height, usenavbuttons,
 				
 			closebtn.onmouseover  = function() { this.style.color = "#555555"; };
 			closebtn.onmouseout  = function() { this.style.color = "#ffffff"; };
+			closebtn.classList.add('galleryclosebutton');
 		}
 	}
 }
